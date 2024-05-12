@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Viewer</title>
+    <link rel="stylesheet" href="singleImage.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Here is your photo!</h1>
+      <img id="targetImage" src="" alt="Image" />
+    </main>
+
+    <script>
+      const imageUrl = new URLSearchParams(window.location.search).get(
+        "imageUrl"
+      );
+
+      // Check if imageUrl exists in query string
+      if (imageUrl) {
+        document.getElementById("targetImage").src = imageUrl;
+      } else {
+        // Handle the case where no image URL is provided
+        console.error("No image URL found in query string");
+        // Optionally display an error message or default image
+      }
+    </script>
+  </body>
+</html>

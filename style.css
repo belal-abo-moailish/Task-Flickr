@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+.page.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  max-width: 100%;
+}
+
+.loading {
+  /* Change cursor to indicate loading until script finishes loading images */
+  cursor: progress;
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+nav {
+  background-color: #e2e2e2;
+  padding: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+
+/* Main Content */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Search Form */
+#searchForm {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+}
+
+/* Style the search button */
+.search button {
+  background-color: #6b6b6b;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search button:hover {
+  background-color: #333;
+}
+
+#search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+/* Cards */
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  /* Set width and margins for cards */
+  width: 300px; /* Adjust width as needed */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden; /* Clip image within card */
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  scale: 1.07;
+}
+
+.card img {
+  /* Style the card image */
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover; /* Scale image to fill container */
+}
+
+/* Add optional styles for card content below the image */
+.card-content {
+  padding: 10px;
+  font-weight: bold;
+  flex-grow: 1; /* Allow content to fill remaining space */
+}
+
+/* Pagination */
+#pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+#pagination button {
+  /* Base styles for all buttons */
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+#pagination button:hover {
+  background-color: #f5f5f5;
+}
+
+#pagination button.disabled {
+  /* Style for disabled buttons */
+  cursor: default;
+  opacity: 0.6;
+}
+
+#pagination button.active {
+  /* Style for active button */
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 20px;
+  font-size: large;
+  font-weight: bold;
+  background-color: #e2e2e2;
+}
